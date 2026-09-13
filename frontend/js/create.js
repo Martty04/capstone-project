@@ -1,3 +1,4 @@
+const API_URL = "https://capstone-project-55lc.onrender.com/api";
 
 // SIGN UP
 const signupForm = document.getElementById("signupForm");
@@ -51,7 +52,7 @@ if (signupForm) {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/register",
+                            `${API_URL}/auth/register`,
                 {
                     method: "POST",
 
