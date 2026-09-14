@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeReach - About Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link rel="icon" type="image/png" href="../images/flag.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="nav-container">
+
+       <a href="../html/home.html" class="logo">
+                               <img src="../frontend/images/logo.png" width="40%">
+
+            </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="feature.html">
+                Features
+            </a>
+
+            <a href="howitworks.html">
+                How It Works
+            </a>
+
+            <a href="about.html" class="active">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+
+    <!-- DESKTOP LOGIN -->
+
+            <div class="desktop-actions">
+
+                <a href="../frontend/html/login.html" class="login-link">
+                    Log in
+                </a>
+
+                <a href="../frontend/html/create.html" class="header-btn">
+                    Get Started
+                </a>
+
+            </div>
+
+        <!-- DESKTOP ACTIONS -->
+
+        <div class="desktop-actions">
+
+            
+
+        </div>
+
+
+        <!-- MOBILE BURGER -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE SIDEBAR
+===================================================== -->
+
+<aside class="mobile-sidebar" id="sidebar">
+
+    <div class="mobile-header">
+
+        <a href="../frontend/index.html" class="logo">
+
+            <span>
+              <span>
+                    <img src="../frontend/images/logo.png" width="60%">
+                </span>
+            </span>
+
+           
+
+        </a>
+
+        <button
+            class="close-menu"
+            id="closeMenu"
+            aria-label="Close menu"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <nav class="mobile-nav">
+
+        <a href="../frontend/html/index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="../frontend/html/feature.html">
+            <i class="fa-solid fa-shield-halved"></i>
+            Features
+        </a>
+
+        <a href="../frontend/html/how-it-works.html">
+            <i class="fa-solid fa-list-check"></i>
+            How It Works
+        </a>
+
+        <a href="../frontend/html/about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+        <a href="../frontend/html/contact.html">
+            <i class="fa-solid fa-phone"></i>
+            Contact Us
+        </a>
+
+    </nav>
+
+
+    <div class="mobile-actions">
+
+        <a href="../frontend/html/login.html" class="mobile-login">
+            Log In
+        </a>
+
+        <a href="../frontend/html/report.html" class="mobile-report">
+            Report Incident
+        </a>
+
+    </div>
+
+</aside>
+
+
+<div class="overlay" id="overlay"></div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         ABOUT HERO
+    ================================================== -->
+
+    <section class="about-hero">
+
+        <div class="container about-hero-grid">
+
+
+            <div class="about-hero-content">
+
+                <span class="eyebrow">
+                    OUR MISSION
+                </span>
+
+                <h1>
+                    Empowering citizens with
+                    <span>actionable safety data.</span>
+                </h1>
+
+                <p>
+                    We believe that safety shouldn't be a privilege. By harnessing the
+                    power of community intelligence, we provide real-time, verified
+                    information to keep every neighborhood secure.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="register.html" class="primary-btn">
+                        Get Started
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="features.html" class="secondary-btn">
+                      View Map
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO IMAGE -->
+            <!--
+                NOTE: this markup was previously malformed (unclosed <div> tags),
+                which is what was breaking the hero layout on smaller screens.
+                It has been corrected below into a proper, closed structure so the
+                responsive CSS can target it reliably.
+            -->
+
+            <div class="hero-image">
+
+                <div class="hero-photo-wrap">
+
+                    <img src="../frontend/images/Container.png" class="hero-photo-img" width="90%">
+
+                    <div class="screen-map">
+
+                        <div class="map-card">
+                            <i class="fa-solid fa-check green-check" aria-hidden="true"></i>
+                            <strong>Live Verification</strong>
+                            <small>Our proprietary algorithm cross-references incident reports with municipal data in milliseconds.</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         VISION
+    ================================================== -->
+
+    <section class="vision-section">
+
+        <div class="container">
+
+            <div class="vision-heading">
+
+                <h2>
+                    Our Vision for Tomorrow
+                </h2>
+
+                <p>
+                    A world where community intelligence prevents tragedy before it occurs.
+                </p>
+
+            </div>
+
+
+            <div class="vision-grid">
+
+
+                <!-- CARD -->
+
+                <article class="vision-card pink">
+
+                    <div>
+                        <img src="../frontend/images/eye.png" width="6%">
+                    </div>
+
+                    <h3>
+                        Protective Safety
+                    </h3>
+
+                    <p>
+                        Leveraging machine learning to identify patterns in <br> community reports, allowing local authorities to allocate <br> resources where they are needed most, preemptively.
+                    </p>
+
+                </article>
+
+
+                <!-- CARD -->
+
+                <article class="vision-card green">
+
+                    <div class="vision-icon">
+                        <img src="../frontend/images/group.png" width="100%">
+                    </div>
+
+                    <h3>
+                        United Communities
+                    </h3>
+
+                    <p>
+                        Breaking down the silos between <br> citizens, local business, and civic <br> responders.
+                    </p>
+
+                </article>
+
+
+                <!-- CARD -->
+
+                <article class="vision-card blue">
+
+                    <div >
+                        <img src="../frontend/images/veryblue.png" width="5%">
+                    </div>
+
+                    <h3>
+                        Absolute Acurracy
+                    </h3>
+
+                    <p>
+                        Eliminating misinformation <br> during crisis through rigorous <br> multi-point verification.
+                    </p>
+
+                </article>
+
+
+                <!-- IMAGE CARD -->
+
+                <article class="vision-card image-card">
+
+                    <div > <img src="../frontend/images/aboutimg.png" height="250px" width="100%">
+                    </div>
+
+                    <div class="image-card-overlay">
+
+                        <h3>
+                            Resilient Infrastructure
+                        </h3>
+
+                        <p>
+                            Building digital tools that remain operational even when traditional networks fail.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         OUR STORY
+    ================================================== -->
+
+    <section class="story-section">
+
+        <div class="container story-grid">
+
+
+            <!-- IMAGE -->
+
+            <div class="story-image">
+
+                <div>
+
+                    <div>
+
+                    </div>
+
+                    <div> <img src="../frontend/images/Background+Border.png" height="350px" width="100%"> </div>
+                 
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="story-content">
+
+                <h2>
+                    The SafeReach Story
+                </h2>
+
+                <p>
+                    SafeReach didn't start in a boardroom; it started in a basement  following a city-wide blackout. When official channels went silent, the community relied on fragmented, unverified social media  posts. The chaos that followed proved that people don't just need  information—they need truth.
+                </p>
+
+                <p>
+                    Our founders, a team of emergency response coordinators and  software architects, envisioned a civic safety tool that combined the speed of social media with the authority of emergency  services.
+                </p>
+
+                <p>
+                    Today, SafetyAlert serves as the bridge between public concern and official action, providing a stable, reliable platform for real- time reporting and community support.
+                </p>
+
+
+                <div class="story-stats">
+
+                    <div>
+                        <strong>2026</strong>
+                        <span>FOUNDED</span>
+                    </div>
+                       <P style="color: grey;"> | </P>
+                    <div>
+                        <strong>120+</strong>
+                        <span>PARTNER CITIES</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         STATS
+    ================================================== -->
+
+    <section class="stats-section">
+
+        <div class="container stats-grid">
+
+            <div class="stat">
+                 <img src="../frontend/images/guard.png" width="6%"> 
+                <strong>
+                    50K+
+                </strong>
+
+                <span>
+                    Alerts Verified
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+                    <img src="../frontend/images/asterick.png" width="6%">
+                <strong>
+                    98%
+                </strong>
+
+                <span>
+                    Accuracy Rate
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+              <img src="../frontend/images/speed.png" width="6%">
+                <strong>
+                    3s
+                </strong>
+
+                <span>
+                    Avg.Response Time
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+              <img src="../frontend/images/people.png" width="6%">
+                <strong>
+                    12M
+                </strong>
+
+                <span>
+                    Citizens protected
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CTA
+    ================================================== -->
+
+    <section class="movement-section">
+
+        <div class="container">
+
+            <div class="movement-box">
+
+                <h2>
+                    Join the movement for a safer community.
+                </h2>
+
+                <p>
+                    Whether you're a concerned citizen or a city official, our tools are designed to empower you with <br> the clarity you need in critical moments.
+                </p>
+
+
+                <div class="movement-buttons">
+
+                    <a href="../frontend/html/register.html" class="movement-primary">
+                        Report Emergencies
+                    </a>
+
+                    <a href="../frontend/html/contact.html" class="movement-secondary">
+                        Contact our Team
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                               <img src="../frontend/images/logo.png" width="30%">
+
+            </a>
+
+            <p>
+                Professional-grade incident <br> verification and communication for <br> modern civic safety. Building resilient communities through real- <br> time data.
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-bluetooth"></i>
+                </a>
+
+                <a href="#">
+                    <img src="../frontend/images/globe.png" width="60%">
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                PLATFORM
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="alerts.html">
+                How it works
+            </a>
+
+            <a href="report.html">
+                Live Alerts
+            </a>
+
+            <a href="features.html">
+                Key Features
+            </a>
+ 
+             <a href="features.html">
+                pricing
+            </a>
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+          RESOURCES
+            </h3>
+
+            <a href="about.html">
+                Report Incident
+            </a>
+
+            <a href="#">
+                Safety Guidelines
+            </a>
+
+            <a href="#">
+                Local Chapters
+            </a>
+
+            <a href="#">
+                Case Studies
+            </a>
+     
+            <a href="#">
+               Help Center 
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                SUPPORT
+            </h3>
+
+            <a href="contact.html">
+                About Us
+            </a>
+
+            <a href="#">
+                Contact support
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms Of Service
+            </a>
+            <a href="#">
+                System Status
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 SafeReach. All rights reserved.
+            </p>
+
+            <div>
+
+                <a href="#">
+                    ISO 27001 Certified Security
+                </a>
+
+                <a href="#">
+                    GDPR Compliant Data Handling
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/java.js"> </script>
+    
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const closeMenu = document.getElementById("closeMenu");
+const overlay = document.getElementById("overlay");
+
+
+// ==========================================
+// OPEN MENU
+// ==========================================
+
+menuToggle.addEventListener("click", () => {
+
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+});
+
+
+// ==========================================
+// CLOSE MENU
+// ==========================================
+
+function closeSidebar() {
+
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+closeMenu.addEventListener("click", closeSidebar);
+
+overlay.addEventListener("click", closeSidebar);
+
+
+// ==========================================
+// CLOSE WHEN NAV LINK IS CLICKED
+// ==========================================
+
+const mobileLinks = document.querySelectorAll(".mobile-nav a");
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener("click", closeSidebar);
+
+});
+    
+</script>
+
+</body>
+</html>
