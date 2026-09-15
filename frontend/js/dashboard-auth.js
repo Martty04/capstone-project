@@ -1,3 +1,7 @@
+const API_URL = "https://capstone-project-55lc.onrender.com/api";
+
+
+
 const token = localStorage.getItem("token");
 
 
@@ -18,7 +22,7 @@ const loadUser = async () => {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/me",
+                        `${API_URL}/auth/me`,
             {
                 method: "GET",
 

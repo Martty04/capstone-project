@@ -1,3 +1,6 @@
+const API_URL = "https://capstone-project-55lc.onrender.com/api";
+
+
 const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");
@@ -110,7 +113,7 @@ if (!token) {
 const getCurrentUser = async () => {
     try {
         const response = await fetch(
-            "http://localhost:5000/api/auth/me",
+                        `${API_URL}/auth/me`,
             {
                 method: "GET",
 
