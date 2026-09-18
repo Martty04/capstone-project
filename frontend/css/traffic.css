@@ -1002,6 +1002,14 @@ background: #222222;
 border-radius: 4px;
 }
 
+/* =========================
+   MOBILE USER PROFILE
+========================= */
+
+.mobile-profile {
+    display: none;
+}
+
 
 /* =========================================
 TABLET
@@ -1074,24 +1082,21 @@ TABLET / SMALL LAPTOP
 width: 45%;
 margin:0 1rem ;
 }
-.sidebar {
-position: fixed;
 
-left: -260px;
 
-top: 0;
+.sidebar{
+display: flex;
+position:fixed;
+left:-860px;
+top:0;
+width:100vw;
+height:100%;
+background:#fff;
+z-index:999;
+transition:.3s;
+box-shadow:2px 0 20px rgba(0,0,0,.12);
 
-width: 240px;
-
-height: 100vh;
-
-background: #eef7ee;
-
-transition: left 0.3s ease;
-
-box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
 }
-
 
 .sidebar.active {
 left: 0;
@@ -1230,7 +1235,62 @@ min-height: 115px;
 }
 
 }
+@media (max-width: 768px) {
 
+    .mobile-profile {
+        display: block;
+        margin: 25px 18px 20px;
+        padding: 14px;
+        background: #ffffff;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+    }
+
+    .mobile-profile-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    .mobile-profile-image {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .mobile-profile-info {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mobile-profile-info h4 {
+        margin: 0;
+        color: #111827;
+        font-size: 15px;
+        font-weight: 700;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-profile-info p {
+        margin: 4px 0 0;
+        color: #6b7280;
+        font-size: 12px;
+        font-weight: 400;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
 
 /* =========================================
 MOBILE

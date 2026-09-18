@@ -116,12 +116,39 @@
 
             </a>
 
+
+
             <button id="closeMenu" class="close-menu">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
         </div>
+<!-- Mobile User Profile -->
+<div class="mobile-profile">
 
+    <a href="settings.html" class="mobile-profile-link">
+
+        <img
+            src="../images/male-profile.png"
+            class="mobile-profile-image profileImage"
+            alt="Profile"
+        >
+
+        <div class="mobile-profile-info">
+
+            <h4 data-user-name>
+                Loading...
+            </h4>
+
+            <p data-user-email>
+                Loading...
+            </p>
+
+        </div>
+
+    </a>
+
+</div>
 
         <nav class="mobile-nav">
 
@@ -153,32 +180,18 @@
         </nav>
 
 
-        <div class="mobile-menu-bottom">
-
-          <div class="profile">
-
-                    <!-- USER INFORMATION -->
-                    
-
-
-                    <!-- PROFILE IMAGE -->
-                   <a href="../html/dashboard.html"> <img src="../images/male-profile.png" id="profileImage"
-                        class="profile-image" alt="Profile"></a>
-
-<div class="profile-info">
-
-                         <div class="user">
-            <h4 class="userName">Loading...</h4>
-            <p class="userEmail">Loading...</p>
-        </div>
-
-                    </div>
-                </div>
+        
 
             </div>
 
         </div>
 
+    <div class="mobile-actions">
+
+        <a href="login.html" class="mobile-login">
+            Log Out
+        </a>
+    </div>
     </aside>
 
 
@@ -1272,11 +1285,11 @@
 
             if (user.gender && user.gender.toLowerCase() === "female") {
 
-                image.src = "../img/female-profile.png";
+                image.src = "../images/female-profile.png";
 
             } else {
 
-                image.src = "../img/male-profile.png";
+                image.src = "../images/male-profile.png";
 
             }
 
@@ -1298,7 +1311,7 @@
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/me",
+                "https://capstone-project-55lc.onrender.com/api/auth/me",
                 {
                     method: "GET",
 

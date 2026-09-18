@@ -35,12 +35,37 @@ SIDEBAR
 <!-- Logo -->
 <div class="logo">
 
-<a href="index.html"> <img src="../images/logo.png" class="shield" alt="SafeReach Logo"></a>
-<a href="index.html"><img src="../images/logo1.png" class="shield1" alt="SafeReach Logo"></a>
+<a href="home.html"> <img src="../images/logo.png" class="shield" alt="SafeReach Logo"></a>
+<a href="home.html"><img src="../images/logo1.png" class="shield1" alt="SafeReach Logo"></a>
 
 </div>
 
+<!-- Mobile User Profile -->
+<div class="mobile-profile">
 
+    <a href="settings.html" class="mobile-profile-link">
+
+        <img
+            src="../images/male-profile.png"
+            class="mobile-profile-image profileImage"
+            alt="Profile"
+        >
+
+        <div class="mobile-profile-info">
+
+            <h4 data-user-name>
+                Loading...
+            </h4>
+
+            <p data-user-email>
+                Loading...
+            </p>
+
+        </div>
+
+    </a>
+
+</div>
 <!-- Sidebar Close -->
  <button class="close-btn" onclick="closeSidebar()">&times;</button>
 
@@ -166,6 +191,7 @@ alt="Notifications"
 <div class="profile">
 
 <div class="profile-info">
+
 <div class="user">
 
    
@@ -181,11 +207,12 @@ alt="Notifications"
 </div>
 
 
-<img
+<a href="settings.html"> <img
         src="../images/male-profile.png"
         id="profileImage"
         alt="Profile"
-    >
+    ></a>
+
 </div>
 
 </div>
@@ -379,10 +406,10 @@ A disabled vehicle has been successfully cleared from the right lane. Traffic fl
 
 </div>
 <script src="../js/dashboard.js"></script>
+<script src="../js/dashboard-reports.js"></script>
 <script src="../js/dashboard-auth.js"></script>
 <script src="../js/auth.js"></script>
 <script>
-    loadUserInformation();
 </script>
 </body>
 </html>
