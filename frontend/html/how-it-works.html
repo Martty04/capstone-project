@@ -695,12 +695,37 @@ degree of authority and speed, keeping you informed and safe.
 </footer>
 
 
-<script src=""></script>
-<script src="../js/dashboard.js"></script>
-<script src="../js/dashboard-auth.js"></script>
-<script src="./js/auth.js"></script>
 <script>
-   
+
+    // ==========================================
+    // MOBILE SIDEBAR
+    // ==========================================
+
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.getElementById("sidebar");
+    const closeMenu = document.getElementById("closeMenu");
+    const overlay = document.getElementById("overlay");
+
+    menuToggle.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    });
+
+    function closeSidebar() {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    closeMenu.addEventListener("click", closeSidebar);
+    overlay.addEventListener("click", closeSidebar);
+
+    document.querySelectorAll(".mobile-nav a").forEach(link => {
+        link.addEventListener("click", closeSidebar);
+    });
+
+
     // ==========================================
     // GET TOKEN
     // ==========================================
@@ -854,6 +879,7 @@ degree of authority and speed, keeping you informed and safe.
         getCurrentUser();
 
     }
-</script>
+
+   </script>
 </body>
 </html>

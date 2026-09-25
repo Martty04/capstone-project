@@ -762,6 +762,159 @@ Save Changes
 <script src="../js/dashboard-auth.js"></script>
 <script src="../js/auth.js"></script>
 <script>
+    // ==========================================
+    // GET TOKEN
+    // ==========================================
+
+    const token = localStorage.getItem("token");
+
+
+    // ==========================================
+    // CHECK LOGIN
+    // ==========================================
+
+    if (!token) {
+
+        window.location.href = "login.html";
+
+    }
+
+
+    // ==========================================
+    // DISPLAY USER INFORMATION
+    // ==========================================
+
+    function displayUser(user) {
+
+        // Get all desktop + mobile name elements
+        const userNames = document.querySelectorAll(".userName");
+
+        const userEmails = document.querySelectorAll(".userEmail");
+
+        const profileImages = document.querySelectorAll(".profileImage");
+
+
+        // -------------------------------
+        // NAME
+        // -------------------------------
+
+        userNames.forEach(element => {
+
+            element.textContent = user.name || "User";
+
+        });
+
+
+        // -------------------------------
+        // EMAIL
+        // -------------------------------
+
+        userEmails.forEach(element => {
+
+            element.textContent = user.email || "No email";
+
+        });
+
+
+        // -------------------------------
+        // PROFILE IMAGE
+        // -------------------------------
+
+        profileImages.forEach(image => {
+
+            if (user.gender && user.gender.toLowerCase() === "female") {
+
+                image.src = "../images/female-profile.png";
+
+            } else {
+
+                image.src = "../images/male-profile.png";
+
+            }
+
+        });
+
+
+        // Save the latest user information
+        localStorage.setItem("user", JSON.stringify(user));
+
+    }
+
+
+    // ==========================================
+    // GET CURRENT LOGGED-IN USER
+    // ==========================================
+
+    async function getCurrentUser() {
+
+        try {
+
+            const response = await fetch(
+                "https://capstone-project-55lc.onrender.com/api/auth/me",
+                {
+                    method: "GET",
+
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                    }
+                }
+            );
+
+
+            const data = await response.json();
+
+
+            // -------------------------------
+            // INVALID TOKEN
+            // -------------------------------
+
+            if (!response.ok) {
+
+                console.error(
+                    "Authentication failed:",
+                    data.message
+                );
+
+                localStorage.removeItem("token");
+                localStorage.removeItem("user");
+
+                window.location.href = "login.html";
+
+                return;
+            }
+
+
+            // -------------------------------
+            // USER FOUND
+            // -------------------------------
+
+            console.log("Logged-in user:", data.user);
+
+            displayUser(data.user);
+
+
+        } catch (error) {
+
+            console.error(
+                "Error retrieving user:",
+                error
+            );
+
+        }
+
+    }
+
+
+    // ==========================================
+    // RUN USER REQUEST
+    // ==========================================
+
+    if (token) {
+
+        getCurrentUser();
+
+    }
 </script>
 
 </body>
