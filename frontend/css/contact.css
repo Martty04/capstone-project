@@ -111,6 +111,57 @@ select {
     font-size: 10px;
 }
 
+/* =====================================================
+   NAVBAR PROFILE
+===================================================== */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+    min-width: 120px;
+}
+
+.user h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    white-space: nowrap;
+}
+
+.user p {
+    margin: 3px 0 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.profile-image {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
 
 /* DESKTOP NAV */
 
@@ -923,6 +974,15 @@ select {
 }
 
 
+/* =========================
+   MOBILE USER PROFILE
+========================= */
+
+.mobile-profile {
+    display: none;
+}
+
+
 /* =====================================================
    TABLET
 ===================================================== */
@@ -958,6 +1018,65 @@ select {
 
 }
 
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 768px) {
+
+    .mobile-profile {
+        display: block;
+        margin: 25px 18px 20px;
+        padding: 14px;
+        background: #ffffff;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+    }
+
+    .mobile-profile-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    .mobile-profile-image {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .mobile-profile-info {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mobile-profile-info h4 {
+        margin: 0;
+        color: #111827;
+        font-size: 15px;
+        font-weight: 700;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-profile-info p {
+        margin: 4px 0 0;
+        color: #6b7280;
+        font-size: 12px;
+        font-weight: 400;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
 
 /* =====================================================
    MOBILE
